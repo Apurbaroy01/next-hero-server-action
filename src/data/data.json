@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Design landing page",
+      "description": "Create UI for the main landing page",
+      "status": "pending",
+      "priority": "high",
+      "dueDate": "2026-04-25"
+    },
+    {
+      "id": 2,
+      "title": "Fix login bug",
+      "description": "Resolve authentication issue in login system",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-04-23"
+    },
+    {
+      "id": 3,
+      "title": "Setup database",
+      "description": "Configure MongoDB and connect backend",
+      "status": "completed",
+      "priority": "medium",
+      "dueDate": "2026-04-20"
+    },
+    {
+      "id": 4,
+      "title": "Write API documentation",
+      "description": "Document all REST API endpoints",
+      "status": "pending",
+      "priority": "low",
+      "dueDate": "2026-04-30"
+    },
+    {
+      "id": 5,
+      "title": "Implement search feature",
+      "description": "Add search functionality with filters",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-04-27"
+    }
+  ]
+}
