@@ -1,3 +1,5 @@
+"use client";
+import { Button } from "@heroui/react";
 import Image from "next/image";
 
 export default function Home() {
@@ -58,6 +60,8 @@ export default function Home() {
           >
             Documentation
           </a>
+
+          <Button onPress={() => console.log("Button pressed")}>Click me</Button>;
         </div>
       </main>
     </div>
