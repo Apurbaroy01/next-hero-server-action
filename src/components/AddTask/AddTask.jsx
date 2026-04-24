@@ -1,9 +1,9 @@
 "use client";
 
-import { Envelope } from "@gravity-ui/icons";
-import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import { ChevronsExpandVertical, Envelope } from "@gravity-ui/icons";
+import { Button, Input, Label, Modal, Surface, TextField , Select, ListBox} from "@heroui/react";
 
-export function AddTask({createAtask}) {
+export function AddTask({ createAtask }) {
     return (
         <Modal>
             <Button variant="secondary">Open Contact Form</Button>
@@ -29,18 +29,34 @@ export function AddTask({createAtask}) {
                                         <Label>Email</Label>
                                         <Input placeholder="Enter your email" />
                                     </TextField>
-                                    <TextField className="w-full" name="phone" type="tel">
-                                        <Label>Phone</Label>
-                                        <Input placeholder="Enter your phone number" />
-                                    </TextField>
-                                    <TextField className="w-full" name="company">
-                                        <Label>Company</Label>
-                                        <Input placeholder="Enter your company name" />
-                                    </TextField>
-                                    <TextField className="w-full" name="message">
-                                        <Label>Message</Label>
-                                        <Input placeholder="Enter your message" />
-                                    </TextField>
+                                    
+
+                                    <Select name="type" className="w-[256px]" placeholder="Select one">
+                                        <Label>Select type</Label>
+                                        <Select.Trigger>
+                                            <Select.Value />
+                                            <Select.Indicator className="size-3">
+                                                <ChevronsExpandVertical />
+                                            </Select.Indicator>
+                                        </Select.Trigger>
+                                        <Select.Popover>
+                                            <ListBox>
+                                                <ListBox.Item id="low" textValue="Florida">
+                                                    Low
+                                                    <ListBox.ItemIndicator />
+                                                </ListBox.Item>
+                                                <ListBox.Item id="medium" textValue="Delaware">
+                                                    Medium
+                                                    <ListBox.ItemIndicator />
+                                                </ListBox.Item>
+                                                <ListBox.Item id="high" textValue="California">
+                                                    High
+                                                    <ListBox.ItemIndicator />
+                                                </ListBox.Item>
+                                                
+                                            </ListBox>
+                                        </Select.Popover>
+                                    </Select>
 
 
                                     <Modal.Footer>
@@ -49,7 +65,7 @@ export function AddTask({createAtask}) {
                                         </Button>
                                         <Button type="submit">Submit TAsk</Button>
                                     </Modal.Footer>
-                                </form>     
+                                </form>
                             </Surface>
                         </Modal.Body>
 
