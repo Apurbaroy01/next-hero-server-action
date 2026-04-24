@@ -3,6 +3,7 @@ import { AddTask } from "@/components/AddTask/AddTask";
 import TaskCard from "@/components/TaskCard/TaskCard";
 import { createAtask } from "@/lib/Action";
 import { getTask } from "@/lib/task";
+import Link from "next/link";
 
 
 const taskPage = async () => {
@@ -13,7 +14,8 @@ const taskPage = async () => {
                 <h2 className="font-bold md:text-3xl p-2">This is task page</h2>
                 <p>task length {tasks.length}</p>
 
-                <AddTask createAtask={createAtask}/>
+                <AddTask createAtask={createAtask} />
+                <Link href={"task/newtask"} >New Task</Link>
             </div>
             <div className="flex flex-wrap gap-4 p-4">
                 {tasks.map((task) => (
